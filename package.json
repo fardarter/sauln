@@ -1,0 +1,26 @@
+{
+  "name": "sauln",
+  "version": "1.0.0",
+  "description": "cv",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp-dev": "gulp build & gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fardarter/sauln.git"
+  },
+  "author": "saul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fardarter/sauln/issues"
+  },
+  "homepage": "https://github.com/fardarter/sauln#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
