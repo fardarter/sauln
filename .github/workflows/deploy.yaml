@@ -1,0 +1,19 @@
+on: push
+name: Deploy
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 20
+      - run: |
+          git fetch --depth=20 origin +refs/tags/*:refs/tags/*
+      - name: deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          ftp-server: ftp://ftp.sauln.co.za/public_html/
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
