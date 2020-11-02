@@ -4,7 +4,7 @@ const sass = require("gulp-sass");
 // a task to generate the css with sass
 gulp.task("css", function () {
   return gulp
-    .src("./sass/style.scss")
+    .src("./sass/*.scss")
     .pipe(
       sass({
         outputStyle: "compressed",
