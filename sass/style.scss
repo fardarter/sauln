@@ -273,6 +273,7 @@ section.cover {
   margin-top: 0;
 }
 
+ul.ambits li::before,
 .duties ul li::before,
 .boasts li::before,
 .skill li::before {
@@ -291,6 +292,7 @@ section.cover {
 }
 
 .duties ul li::before,
+ul.ambits li::before,
 .boasts li::before {
   background: $gray;
 }
@@ -498,5 +500,14 @@ section.cover {
   }
   a {
     display: none;
+  }
+  aside {
+    width: 100%;
+  }
+  aside > * {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
   }
 }
