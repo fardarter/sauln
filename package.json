@@ -4,7 +4,7 @@
   "description": "cv",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp-dev": "gulp build & gulp watch"
+    "dev": "gulp build & gulp watch"
   },
   "repository": {
     "type": "git",
