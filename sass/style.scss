@@ -1,5 +1,14 @@
+$greenA: #003d1a;
+$greenB: #2a5f53;
+$greenblue: #54818d;
+$bluegreen: #7ea3c6;
+$blueA: #a8c5ff;
+$gray: #bcbcc4;
+
+@import "type.scss";
+
 $layout-offset: 0.75rem;
-$base-vertical-spacing: 1em;
+$base-vertical-spacing: 2rem;
 $main-offset-top: 2rem;
 $size00: 1em;
 $size300: 18.75em;
@@ -19,13 +28,6 @@ $size1600: 100em;
     @content;
   }
 }
-
-$greenA: #003d1a;
-$greenB: #2a5f53;
-$greenblue: #54818d;
-$bluegreen: #7ea3c6;
-$blueA: #a8c5ff;
-$gray: #bcbcc4;
 
 * {
   box-sizing: border-box;
@@ -115,36 +117,6 @@ aside > * {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
-// --------------------------------------
-section h1,
-section:not(.cover) h2 {
-  border-top: 0.1rem solid black;
-  border-bottom: 0.1rem solid black;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-p,
-.skill-class > *:not(h3) {
-  margin: 1em 0 0 0;
-  word-wrap: break-word;
-}
-
-h1:first-of-type {
-  margin: 0em 0 0 0;
-}
-
-section:not(.cover) h1,
-section:not(.cover) h2,
-div.cover-letter h2,
-div.cover-letter h1 {
-  padding: 0.3rem 0;
 }
 
 .skill-class h3 {

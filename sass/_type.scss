@@ -1,0 +1,50 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+.skill-class > *:not(h3) {
+  margin: 1rem 0 0 0;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+.skill-class > *:not(h3) {
+  &.quarter-margin-top {
+    margin: 0.25rem 0 0 0;
+  }
+}
+
+h1:first-of-type {
+  margin: 0em 0 0 0;
+}
+
+article.standard h3 {
+  border-bottom: 2px solid $greenblue;
+}
+
+article .dates {
+  color: $greenblue;
+}
+
+section:not(.cover) h1,
+section:not(.cover) h2,
+div.cover-letter h2,
+div.cover-letter h1 {
+  padding: 0.3rem 0;
+}
+
+// --------------------------------------
+section:not(.cover) h2 {
+  border-bottom: 1px solid $gray;
+}
