@@ -1,27 +1,6 @@
-$greenA: #003d1a;
-$greenB: #2a5f53;
-$greenblue: #54818d;
-$bluegreen: #7ea3c6;
-$blueA: #a8c5ff;
-$gray: #bcbcc4;
-
+@import "variables.scss";
 @import "type.scss";
-
-$layout-offset: 0.75rem;
-$base-vertical-spacing: 2rem;
-$main-offset-top: 2rem;
-$size00: 1em;
-$size300: 18.75em;
-$size350: 21.9em;
-$size400: 25em;
-$size500: 31.25em;
-$size550: 34.375em;
-$size600: 37.5em;
-$size700: 43.75em;
-$size800: 50em;
-$size1000: 62.5em;
-$size1200: 75em;
-$size1600: 100em;
+@import "layout.scss";
 
 @mixin breakpoint($size) {
   @media only screen and (min-width: $size) {
@@ -36,12 +15,12 @@ $size1600: 100em;
 
 html {
   font-family: "Catamaran", sans-serif;
-  font-size: calc(0.8em + 0.2vw);
   min-height: 100%;
   display: flex;
   justify-content: center;
   min-width: 320px;
   line-height: 1.4;
+  color: $black;
 }
 
 body {
@@ -120,7 +99,7 @@ aside > * {
 }
 
 .skill-class h3 {
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid $black;
 }
 
 ul {
@@ -133,10 +112,6 @@ li {
 
 article ul {
   padding-left: 0;
-}
-
-ul li:first-of-type {
-  margin-top: 0.5rem;
 }
 
 ul.split-2 {

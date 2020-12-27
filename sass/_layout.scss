@@ -1,0 +1,49 @@
+// --------------------------- Font-scaling Algorithm ----------------------------
+// For the general strategy: https://www.codementor.io/ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
+// Explanation contained herein: https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+
+// -------------
+// Min and max viewport sizes to apply the font scaling
+$min_width: 320;
+$max_width: 1400;
+// --------------
+
+// --------------
+// Range of font size to apply
+$min_font: 13;
+$max_font: 16;
+
+// --------------
+
+html {
+  font-size: #{$min_font}px;
+}
+
+// --------------
+// Media queries
+// -------------
+
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  html {
+    font-size: calc(
+      #{$min_font}px + (#{$max_font} - #{$min_font}) *
+        ((100vw - #{$min_width}px) / (#{$max_width} - #{$min_width}))
+    );
+  }
+}
+
+@media (min-width: #{$max_width}px) {
+  html {
+    font-size: #{$max_font}px;
+  }
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-gap: 0rem 1rem;
+}
+
+.first-list-gap {
+  margin-top: 0.5rem;
+}
