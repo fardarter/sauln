@@ -157,17 +157,7 @@ section.cover {
 }
 
 .job-desc h5 {
-  @include breakpoint($size00) {
-    width: 100%;
-    order: 2;
-  }
-  @include breakpoint($size600) {
-    width: 35%;
-  }
-  @include breakpoint($size700) {
-    width: 50%;
-  }
-
+  width: 100%;
   float: left;
   padding-bottom: 0.5rem;
 }
@@ -178,45 +168,7 @@ section.cover {
   }
 }
 
-.duties {
-  @include breakpoint($size00) {
-    width: 100%;
-    order: 1;
-    padding: 0;
-  }
-  @include breakpoint($size600) {
-    width: 65%;
-    padding: 0 0 0.5rem 0.5rem;
-  }
-  @include breakpoint($size700) {
-    width: 50%;
-  }
-  display: inline;
-  float: right;
-}
-
-.duties h5 {
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
-.duties ul {
-  display: inline-flex;
-  flex-wrap: wrap;
-  margin-top: 0rem;
-}
-
-.duties ul li {
-  @include breakpoint($size00) {
-    width: 100%;
-  }
-  @include breakpoint($size350) {
-    width: 50%;
-  }
-  margin-top: 0;
-}
-
 ul.ambits li::before,
-.duties ul li::before,
 .boasts li::before,
 .skill li::before {
   content: "";
@@ -233,7 +185,6 @@ ul.ambits li::before,
   }
 }
 
-.duties ul li::before,
 ul.ambits li::before,
 .boasts li::before {
   background: $gray;
@@ -254,8 +205,7 @@ ul.ambits li::before,
 
 //-----------------------------------------------Skill list
 .skill li,
-.boasts li,
-.duties ul li {
+.boasts li {
   list-style: none;
   padding-left: 1.1rem;
   position: relative;
