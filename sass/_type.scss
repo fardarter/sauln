@@ -23,6 +23,9 @@ p,
   &.quarter-margin-top {
     margin: 0.25rem 0 0 0;
   }
+  &.zero-margin-top {
+    margin: 0 0 0 0;
+  }
 }
 
 h1:first-of-type {
@@ -46,5 +49,19 @@ div.cover-letter h1 {
 
 // --------------------------------------
 section:not(.cover) h2 {
-  border-bottom: 1px solid $gray;
+  color: $greenblue;
+  border-bottom: 1px dotted $black;
+}
+
+h1 {
+  &.top-flush {
+    line-height: 1em;
+    padding-top: 0rem !important;
+    padding-bottom: 0.35rem !important;
+    border-bottom: 2px solid $greenblue;
+  }
+}
+
+h2.top-flush {
+  margin-top: 0.1rem;
 }

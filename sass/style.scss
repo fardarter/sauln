@@ -69,7 +69,6 @@ main {
 }
 
 aside {
-  margin-bottom: $main-offset-top;
   justify-content: initial;
   flex-direction: column;
   @include breakpoint($size00) {
@@ -108,10 +107,6 @@ ul {
 
 li {
   list-style-position: inside;
-}
-
-article ul {
-  padding-left: 0;
 }
 
 ul.split-2 {
@@ -174,7 +169,7 @@ section.cover {
   }
 
   float: left;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .job-desc p {
@@ -202,7 +197,7 @@ section.cover {
 
 .duties h5 {
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 .duties ul {
   display: inline-flex;
@@ -372,9 +367,29 @@ ul.ambits li::before,
   display: none;
 }
 
+.print-only {
+  display: none;
+}
+.never-print {
+  display: initial;
+}
+
 @media print {
+  .duties {
+    float: left !important;
+    width: 100% !important;
+  }
+  .job-desc h5 {
+    width: 100%;
+  }
   .print-link {
     display: inline;
+  }
+  .print-only {
+    display: initial;
+  }
+  .never-print {
+    display: none;
   }
   a {
     display: none;
