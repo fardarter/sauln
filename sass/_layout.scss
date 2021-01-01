@@ -44,6 +44,12 @@ html {
   grid-gap: 0rem 1rem;
 }
 
+.auto-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  grid-gap: 0rem 1rem;
+}
+
 .auto-grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
