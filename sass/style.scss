@@ -324,7 +324,15 @@ ul.ambits li::before,
   display: initial;
 }
 
+a#relv-skiplink {
+  display: flex;
+  margin-top: 1rem;
+}
+
 @media print {
+  .page-break {
+    page-break-before: always;
+  }
   .duties {
     float: left !important;
     width: 100% !important;
@@ -341,7 +349,8 @@ ul.ambits li::before,
   .never-print {
     display: none;
   }
-  a {
+  a,
+  a#relv-skiplink {
     display: none;
   }
   aside {
@@ -353,9 +362,4 @@ ul.ambits li::before,
     padding-left: 0rem !important;
     padding-right: 0rem !important;
   }
-}
-
-a#relv-skiplink {
-  display: flex;
-  margin-top: 1rem;
 }
