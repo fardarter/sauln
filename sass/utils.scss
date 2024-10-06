@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $size300: 18.75em;
 $size400: 25em;
 $size500: 31.25em;
@@ -21,8 +23,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -38,8 +40,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -55,8 +57,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -72,8 +74,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -89,8 +91,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -106,8 +108,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -123,8 +125,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }
@@ -140,8 +142,8 @@ $size1600: 100em;
         flex-wrap: wrap;
         > * {
           flex-basis: auto;
-          max-width: #{(100% / $i)};
-          width: #{(100% / $i)};
+          max-width: #{(math.div(100%, $i))};
+          width: #{(math.div(100%, $i))};
           flex-grow: 1;
         }
       }

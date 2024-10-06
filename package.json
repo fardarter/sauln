@@ -4,7 +4,8 @@
   "description": "cv",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp build & gulp watch"
+    "dev": "gulp build & gulp watch",
+    "subset": "subfont ./dist/index.html -i --text 0123456789"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/fardarter/sauln#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
+    "subfont": "^7.2.1"
   }
 }

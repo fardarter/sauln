@@ -103,6 +103,30 @@ aside > * {
 
 ul {
   list-style: none;
+
+  &.bullets {
+    margin-top: 0.5rem;
+    li {
+      list-style: none;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    li::before {
+      background: $gray;
+      content: "";
+      position: absolute;
+      display: flex;
+      height: 0.5rem;
+      width: 0.5rem;
+      left: 0.25rem;
+      @include breakpoint($size00) {
+        top: 0.35em;
+      }
+      @include breakpoint($size500) {
+        top: 0.4em;
+      }
+    }
+  }
 }
 
 li {
@@ -158,8 +182,6 @@ section.cover {
 
 .job-desc h5 {
   width: 100%;
-  float: left;
-  padding-bottom: 0.5rem;
 }
 
 .job-desc p {
@@ -363,3 +385,17 @@ a#relv-skiplink {
     padding-right: 0rem !important;
   }
 }
+
+.roles {
+  display: flex;
+  flex-direction: row;
+  > .dates {
+    margin-left: 0.65rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// b, strong {
+//   font-weight: bold;
+// }
