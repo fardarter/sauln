@@ -1,6 +1,8 @@
 <html lang="en">
 
 <head>
+  <link rel="preload" href="fonts/Catamaran-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Catamaran-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="style" type="text/css" href="css/normalize.css" />
   <link rel="preload" as="style" type="text/css" href="css/utils.css" />
   <link rel="preload" as="style" type="text/css" href="css/style.css" />
@@ -12,11 +14,21 @@
   <title>Saul Nachman | CV</title>
   <style>
     @font-face {
+      font-display: block;
+      font-family: "Catamaran";
+      font-style: bold;
+      font-weight: 700;
+      src: url("fonts/Catamaran-Bold.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-display: block;
       font-family: "Catamaran";
       font-style: normal;
       font-weight: 400;
-      src: local("Catamaran Regular"), local("Catamaran-Regular"),
-        url("data:font/woff2;base64,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") format("woff2");
+      src: url("fonts/Catamaran-Regular.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
   </style>
 </head>
@@ -97,8 +109,7 @@
           <ul class="personal no-grow">
             <h2 class="top-flush">Details</h2>
             <li>
-              Email<a href="mailto:saulnachman@gmail.com"
-                rel="noopener noreferrer">saulnachman@gmail.com</a>
+              Email<a href="mailto:saulnachman@gmail.com" rel="noopener noreferrer">saulnachman@gmail.com</a>
               <span class="print-link">&nbsp;saulnachman@gmail.com</span>
             </li>
             <li>
@@ -115,25 +126,26 @@
               English)
             </li>
           </ul>
-          <ul class="no-grow skill ambits">
-            <h2>Recent ambits</h2>
-            <li class="first-list-gap">k8s/helm/docker</li>
-            <li>ci/cd</li>
-            <li>tooling/sdlc</li>
-            <li>e2e testing</li>
-            <li>observability</li>
-            <li>monitoring</li>
-            <li>pwa architecture</li>
+          <ul class="no-grow skill">
+            <h2>OSes</h2>
+            <li class="sk1 first-list-gap">linux</li>
+            <li class="sk2">windows</li>
+            <li class="sk4">macos</li>
           </ul>
           <ul class="no-grow skill">
             <h2>Languages</h2>
             <li class="sk1 first-list-gap">javascript</li>
-            <li class="sk1">html/scss</li>
-            <li class="sk2">typescript</li>
-            <li class="sk2">go</li>
-            <li class="sk3">c#</li>
-            <li class="sk4">php</li>
-            <li class="sk5">python</li>
+            <li class="sk2">hcl</li>
+            <li class="sk2">bash</li>
+            <li class="sk3">html/css</li>
+            <li class="sk3">typescript</li>
+            <li class="sk3">powershell</li>
+            <li class="sk3">python</li>
+            <li class="sk3">kusto</li>
+            <li class="sk3">go</li>
+            <li class="sk4">c#</li>
+            <li class="sk4">SQL</li>
+            <li class="sk5">php</li>
           </ul>
           <div class="no-grow legend">
             <div class="scale">
@@ -155,72 +167,102 @@
         </aside>
       </section>
       <section class="jobs">
-        <h2>Technical philosophy</h2>
-        <article class="job">
-          <p>
-            One analogy for software production is of team sport:
-            individual sports weight technical skill highly, but teams can only
-            bend so far to accommodate individuals (music also fits the
-            analogy).
-          </p>
-          <p>
-            Coordination is difficult and important. I believe that teams which
-            manage this have members that play for each other.
-          </p>
-          <p>
-            I see CI/CD, gitops, documentation, testing, automation,
-            observability & monitoring, code review, effective planning,
-            as well as training and developing juniors as playing
-            substantial roles in enabling high-performance in teams. They are
-            multipliers.
-          </p>
-          <p>
-            What I'm looking for is an opportunity to be part of a team or
-            department that shares similar view, values and ambitions.
-          </p>
-          <h4 class="role">Some readings</h4>
-          <p class="quarter-margin-top">
-            I've thought deeply the following pieces of writing. I believe they
-            get at some core truths about software
-            production:
-          </p>
-          <ul class="boasts">
-            <li>
-              <a href="https://brooker.co.za/blog/2020/06/23/code.html">
-                Code Only Says What It Does</a>
-              <span class="print-link">Code Only Says What It Does
-                &ndash;
-                https://brooker.co.za/blog/2020/06/23/code.html</span>
-            </li>
-            <li>
-              <a
-                href="https://martinfowler.com/articles/is-quality-worth-cost.html">Is
-                High Quality Software Worth the Cost?</a>
-              <span class="print-link">Is High Quality Software Worth the Cost?
-                &ndash;
-                https://martinfowler.com/articles/is-quality-worth-cost.html</span>
-            </li>
-            <li>
-              <a
-                href="https://google.github.io/eng-practices/review/reviewer/speed.html">Speed
-                of Code Reviews</a>
-              <span class="print-link">Speed of Code Reviews &ndash;
-                https://google.github.io/eng-practices/review/reviewer/speed.html</span>
-            </li>
-            <li>
-              <a
-                href="https://humanwhocodes.com/blog/2015/05/14/the-bunny-theory-of-code/">The
-                Bunny Theory of Code</a>
-              <span class="print-link">The Bunny Theory of Code &ndash;
-                https://humanwhocodes.com/blog/2015/05/14/the-bunny-theory-of-code/</span>
-            </li>
-
+        <h2 id="relevant-experience">Relevant experience</h2>
+        <article class="job standard">
+          <h3>PHDC (Public Health Data Centre) of the Western Cape</h3>
+          <h4 class="role quarter-margin-top">PHDC Cloud & Devops Technical Lead
+          </h4>
+          <h5 class="dates quarter-margin-top">September 2023 &ndash; present
+          </h5>
+          <h4 class="role quarter-margin-top">Senior Devops Engineer
+          </h4>
+          <h5 class="dates quarter-margin-top">January 2022 &ndash; October 2023
+          </h5>
+          <div class="job-desc">
+            <h5>Notable project contributions</h5>
+            <ul class="bullets">
+              <li>Conceived of, designed and implemented a cost-effective <b>ransomware resistent storage pattern</b>
+                for the data engineering team using terraform, archive-tier blob storage, event grid and functions.
+              </li>
+              <li>Technical project lead for infrastructure design and application deployment (to managed kubernetes) of
+                the <b>Community Health Toolkit (CHT)</b> under the <a rel="noreferrer" target="_blank"
+                  href="https://saprin.mrc.ac.za/newsletter/April/CHAMPApp.pdf">Community Health Action Mobile
+                  Platform (CHAMP)</a> banner (in collaboration with <a rel="noreferrer" target="_blank"
+                  href="https://saprin.mrc.ac.za/csharp.html">CSHARP/SAPRIN</a>), a tool
+                for community health workers to effectively survey households in impoverished communities.</li>
+              <li>Acted as devops and security design lead for the <b>Patient Facing Interface</b>, an application for
+                patients to access their individual medical information from the data centre.</li>
+              <li>Heavily slashed developer onboarding time overall for a primary product (<b>Single Patient Viewer</b>)
+                from weeks to hours with a fully automated local setup.</li>
+              <li>Established and maintained a full automation, batteries-included standard for local development on new
+                software projects.</li>
+              <li>Acted as internal technical lead for <b>PHDC website</b> architecture and integration with Azure and
+                oversaw contractor build out.</li>
+              <li>Designed a secure, network- and access-segregated self-hosted runner service for git-driven
+                deployments inside the Western Cape Government network.</li>
+            </ul>
+            <h5>Overall impact</h5>
+            <ul class="bullets">
+              <li>Operated as the PHDC-internal cloud systems and networking architect.</li>
+              <li>Operated as a key PHDC-internal application and network security consultant.</li>
+              <li>Introduced and established IaC and CI/CD patterns and practices.</li>
+              <li>Managed a significant cloud budget responsibly while efficiently and cost effectively adding services,
+                increasing reliability and cutting waste.</li>
+              <li>Established and maintained high-quality, cost-sensitive, IaC-defined development
+                environments in Azure.</li>
+              <li>Managed the PHDC DNS and automated DNS/certificate operations/renewals, including acquisition of valid
+                certificates for services on private networks (all traffic on HTTPS).</li>
+              <li>Introduced effective secret management practices and designed new deployments for maximal use of
+                platform identities and KMSes.</li>
+              <li>Effectively mentored and guided other teams in establishing secure and pragmatic automation practices.
+              </li>
+              <li>Established cloud-native monitoring, logging, alerting for new and existing deployments.</li>
+              <li>Involved in design of and service infrastructure for (incl. Databricks) the PHDC data lake.</li>
+              <li>Was a key technical player in PHDC IaaS to PaaS (SMI) SQL Server migration planning.</li>
+              <li>Involved in designing and planning for disaster recovery and data corruption scenarios.</li>
+              <li>Drove the establishment/structuring of an internal technical architecture forum.
+              </li>
+              <li>Conceived of and organised workshops with MS subject-matter experts on SQL performance and indexing.
+              </li>
+              <li>Interfaced with (and produced compliant technical documentation for) the larger Western Cape
+                Government Azure team to increase PHDC's autonomy in the Azure space and migration to PaaS.</li>
+              <li>Regularly represented PHDC at various Western Cape Government Change Administration Boards (CABs)
+                meetings.</li>
+              <li>Presented new service designs at the Western Cape Government Solution Architects Forum.</li>
+              <li>Organised and normalised user access account types for different user groups.</li>
+              <li>Designed/managed Entra operational access group systems for administering RBAC rights.</li>
+              <li>Established and enforced internal operational best practices, such as mandatory MFA and
+                use of password managers.</li>
+              <li>Managed access, training and secure configuration for multiple teams in the Health Azure Devops
+                environment.</li>
+              <li>Hired for, trained and led a small team of junior devops professionals.</li>
+            </ul>
+          </div>
+          <h4>Technology exposure</h4>
+          <ul class="auto-grid skill quarter-margin-top">
+            <li class="sk1">azure</li>
+            <li class="sk1">terraform</li>
+            <li class="sk1">azure devops</li>
+            <li class="sk1">nginx/modsec</li>
+            <li class="sk1">docker</li>
+            <li class="sk2">couchdb</li>
+            <li class="sk2">SQL Server</li>
+            <li class="sk2">kubernetes (ACA)</li>
+            <li class="sk3">kind/kustomize</li>
+            <li class="sk3">haproxy</li>
+            <li class="sk3">astrobuild</li>
+            <li class="sk3">strapi</li>
+            <li class="sk3">.NET Framework</li>
+            <li class="sk4">.NET Core</li>
+            <li class="sk4">playwright</li>
+            <li class="sk4">blazor</li>
+            <li class="sk4">postgres</li>
+            <li class="sk4">packer</li>
+            <li class="sk4">freeswitch</li>
+            <li class="sk5">mongodb</li>
+            <li class="sk5">atlasgo</li>
           </ul>
         </article>
-        <h2 id="relevant-experience">Relevant experience</h2>
-        <p class="quarter-margin-top">
-          References by request.
-        </p>
         <article class="job standard">
           <h3>Flanksource</h3>
           <h4 class="role quarter-margin-top">Senior Kubernetes Site Reliability
@@ -230,40 +272,40 @@
           <div class="job-desc">
             <h5>Role/responsibilities</h5>
             <p class="quarter-margin-top">
-              As an SRE at Flanksource, I've aided our team in implementing
+              As an SRE at Flanksource, I aided our team in implementing
               kubernetes best practices for our clients, particularly for
               gitops-driven environment configuration/secret
               management and promotion pipelines, but also for deployment
               automation (IaC) and Azure RBAC.
             </p>
             <p class="quarter-margin-top">
-              I've also had the opportunity to contribute code and tutorial blog
+              I also had the opportunity to contribute code and tutorial blog
               posts for Flanksource's open-source kubernetes operators and other
-              command-line tools in go, as well as making automation, tooling,
+              command-line tools in go, and making automation, tooling,
               architectural and component-design contributions for various
               project front-ends (predominately in react/nextjs).
             </p>
           </div>
-          <h4>Technologies</h4>
+          <h4>Technology exposure</h4>
           <ul class="auto-grid skill quarter-margin-top">
             <li class="sk1">kubernetes</li>
-            <li class="sk1">go</li>
             <li class="sk1">docker</li>
-            <li class="sk1">bash</li>
             <li class="sk2">kustomize</li>
             <li class="sk2">auth0</li>
-            <li class="sk2">gitHub actions</li>
+            <li class="sk2">GitHub actions</li>
             <li class="sk2">azure devops</li>
-            <li class="sk2">typescript</li>
             <li class="sk2">nextjs</li>
-            <li class="sk2">aws/eks</li>
+            <li class="sk3">eks</li>
+            <li class="sk3">aks</li>
             <li class="sk3">pulumi</li>
             <li class="sk3">monitoring</li>
             <li class="sk3">fluxcd</li>
             <li class="sk3">powershell</li>
             <li class="sk3">tailwind</li>
-            <li class="sk3">sops/sealed-secrets</li>
-            <li class="sk3">azure/aks</li>
+            <li class="sk3">sops</li>
+            <li class="sk3">nginx</li>
+            <li class="sk4">azure</li>
+            <li class="sk4">aws</li>
           </ul>
         </article>
         <article class="job standard">
@@ -275,35 +317,27 @@
             <h5>Role/responsibilities</h5>
             <p class="quarter-margin-top">
               <strong>FIDO2/WebAuthn: </strong> DevOps Engineer for a
-              FIDO2/WebAuthn project. I have been responsible for developing
-              the product's WebAuthn client library (TypeScript), as well as
-              developing and/or operating CI/CD, E2E/system testing, quality
+              FIDO2/WebAuthn project. I was responsible for developing
+              the WebAuthn client library (TypeScript), and
+              developing and/or operating CI/CD, e2e/system testing, quality
               control automation, load testing (including, specifically, FIDO2
               token emulators in go), monitoring & observability tooling,
               release engineering, repo management, workflow tooling/scripting
               and general SDLC optimisation.
             </p>
           </div>
-          <h4>Technologies</h4>
+          <h4>Technology exposure</h4>
           <ul class="auto-grid skill quarter-margin-top">
             <li class="sk1">webauthn</li>
             <li class="sk1">fido2</li>
-            <li class="sk1">javascript</li>
-            <li class="sk1">typescript</li>
-            <li class="sk1">bash/sh</li>
             <li class="sk1">helm</li>
             <li class="sk1">k8s</li>
-            <li class="sk1">git</li>
             <li class="sk1">rancher</li>
-            <li class="sk1">linux/ubuntu</li>
             <li class="sk1">docker</li>
             <li class="sk1">gitlab ci</li>
             <li class="sk1">jest</li>
-            <li class="sk2">go</li>
-            <li class="sk2">pki</li>
             <li class="sk2">nginx</li>
             <li class="sk3">node</li>
-            <li class="sk3">aws</li>
             <li class="sk3">webpack</li>
             <li class="sk3">grafana</li>
             <li class="sk3">prometheus</li>
@@ -312,8 +346,8 @@
             <li class="sk3">cucumber</li>
             <li class="sk3">argo</li>
             <li class="sk3">vuepress</li>
-            <li class="sk4">html/scss</li>
             <li class="sk4">swagger</li>
+            <li class="sk4">aws</li>
           </ul>
         </article>
         <article class="job standard">
@@ -337,17 +371,14 @@
               component sharing across company projects.
             </p>
           </div>
-          <h4>Technologies</h4>
+          <h4>Technology exposure</h4>
           <ul class="auto-grid skill quarter-margin-top">
             <li class="sk1">pwa</li>
             <li class="sk1">nuxt</li>
             <li class="sk1">vue</li>
             <li class="sk1">vuex</li>
-            <li class="sk1">html/scss</li>
             <li class="sk1">css-modules</li>
-            <li class="sk1">javascript</li>
             <li class="sk1">vuex-orm</li>
-            <li class="sk1">git</li>
             <li class="sk1">jest</li>
             <li class="sk3">node</li>
             <li class="sk3">docker</li>
@@ -385,30 +416,24 @@
               <strong>Other projects: </strong> Lead developer for a business
               showcase website for a Dubai shopping area &ndash; the Dubai
               Design District (d3) project (SiteCore/.NET/SXA/Solr/React
-              stack) as well as developer on a dynamic,
-              configurable-by-metadata form-builder for onboarding Saxobank
+              stack) and developer on a dynamic form-builder for onboarding Saxobank
               clients in Angular 2+.
             </p>
           </div>
-          <h4>Technologies</h4>
+          <h4>Technology exposure</h4>
           <ul class="auto-grid skill quarter-margin-top">
             <li class="sk1">pwa</li>
             <li class="sk1">react</li>
             <li class="sk1">gatsby</li>
             <li class="sk1">redux</li>
             <li class="sk1">redux observable</li>
-            <li class="sk1">html/scss</li>
-            <li class="sk1">javascript</li>
-            <li class="sk1">git</li>
             <li class="sk1">jest</li>
-            <li class="sk2">powershell</li>
             <li class="sk2">azure cli</li>
             <li class="sk3">team city</li>
             <li class="sk3">angular 2+</li>
-            <li class="sk3">.net</li>
+            <li class="sk3">.NET Framework</li>
             <li class="sk3">node</li>
             <li class="sk3">rxjs</li>
-            <li class="sk3">typescript</li>
             <li class="sk3">webpack</li>
             <li class="sk3">sitecore</li>
             <li class="sk4">apache solr</li>
@@ -440,35 +465,31 @@
             <p class="page-break">
               I used this period to study the industry I was entering,
               learning and investing in WordPress customisation, HTML,
-              CSS/SCSS, responsive design, JavaScript and TypeScript
+              CSS, responsive design, JavaScript and TypeScript
               (specifically, Angular 2+).
             </p>
           </div>
-          <h4>Portfolio (last work 2017, mostly)</h4>
+          <h4>Portfolio (last work 2017)</h4>
           <div>
             <ul class="auto-grid-2 quarter-margin-top">
               <li>
-                <span class="print-link">&nbsp;http://5abox.com</span><a
-                  href="http://5abox.com/" target="_blank"
+                <span class="print-link">&nbsp;http://5abox.com</span><a href="http://5abox.com/" target="_blank"
                   rel="noopener noreferrer">5A</a>
               </li>
               <li>Lead developer</li>
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;https://www.silverforest.co.za</span><a
-                  href="https://www.silverforest.co.za/" target="_blank"
-                  rel="noopener noreferrer">Silver Forest Spa</a>
+                <span class="print-link">&nbsp;https://www.silverforest.co.za</span><a
+                  href="https://www.silverforest.co.za/" target="_blank" rel="noopener noreferrer">Silver Forest
+                  Spa</a>
               </li>
               <li>Partial site/feature renovation and redesign</li>
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;http://www.solidgreen.co.za</span><a
-                  href="http://www.solidgreen.co.za/" target="_blank"
-                  rel="noopener noreferrer">Solid Green</a>
+                <span class="print-link">&nbsp;http://www.solidgreen.co.za</span><a href="http://www.solidgreen.co.za/"
+                  target="_blank" rel="noopener noreferrer">Solid Green</a>
               </li>
               <li>
                 Features, content management, maintenance, writing and editing
@@ -476,19 +497,14 @@
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;https://www.airconstudio.co.za</span><a
-                  href="https://www.airconstudio.co.za/" target="_blank"
-                  rel="noopener noreferrer">AirconStudio</a>
+                AirconStudio
               </li>
               <li>Developer and designer</li>
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;https://www.creationwines.com/</span><a
-                  href="https://www.creationwines.com/" target="_blank"
-                  rel="noopener noreferrer">Creation Wines</a>
+                <span class="print-link">&nbsp;https://www.creationwines.com/</span><a
+                  href="https://www.creationwines.com/" target="_blank" rel="noopener noreferrer">Creation Wines</a>
               </li>
               <li>
                 Features, content management, maintenance, HTML emails,
@@ -497,18 +513,15 @@
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span class="print-link">&nbsp;http://ankjewellery.com</span><a
-                  href="http://ankjewellery.com/" target="_blank"
-                  rel="noopener noreferrer">Ankh Jewelry</a>
+                <span class="print-link">&nbsp;http://ankjewellery.com</span><a href="http://ankjewellery.com/"
+                  target="_blank" rel="noopener noreferrer">Ankh Jewelry</a>
               </li>
               <li>Features, maintenance and renovation</li>
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;http://www.markgevisser.com</span><a
-                  href="http://www.markgevisser.com/" target="_blank"
-                  rel="noopener noreferrer">Mark Gevisser</a>
+                <span class="print-link">&nbsp;http://www.markgevisser.com</span><a href="http://www.markgevisser.com/"
+                  target="_blank" rel="noopener noreferrer">Mark Gevisser</a>
               </li>
               <li>
                 Features, content management, editing, maintenance and
@@ -517,26 +530,26 @@
             </ul>
             <ul class="auto-grid-2">
               <li>
-                <span
-                  class="print-link">&nbsp;https://www.fireplacestudio.co.za</span><a
-                  href="https://www.fireplacestudio.co.za/" target="_blank"
-                  rel="noopener noreferrer">Fireplace Studio</a>
+                <span class="print-link">&nbsp;https://www.fireplacestudio.co.za</span><a
+                  href="https://www.fireplacestudio.co.za/" target="_blank" rel="noopener noreferrer">Fireplace
+                  Studio</a>
               </li>
               <li>WordPress migration and partial renovation</li>
             </ul>
           </div>
-          <h4>Technologies</h4>
+          <h4>Technology exposure</h4>
           <ul class="auto-grid skill quarter-margin-top">
             <li class="sk1">wordpress</li>
-            <li class="sk1">html/scss</li>
-            <li class="sk1">javascript</li>
+            <li class="sk1">html/css</li>
             <li class="sk1">angular 2+</li>
             <li class="sk1">jquery</li>
-            <li class="sk1">ftp</li>
             <li class="sk3">photoshop</li>
             <li class="sk4">illustrator</li>
           </ul>
         </article>
+      </section>
+      <section class="jobs">
+        <h2 id="other-experience">Other experience</h2>
         <article class="job standard">
           <h3>Academic editing &ndash; PhDs</h3>
           <h4 class="role quarter-margin-top">Freelance</h4>
@@ -545,8 +558,8 @@
             <em>A crisis of legitimacy for humanitarianism</em> &ndash; 2015
           </h4>
           <p class="quarter-margin-top">
-            <a href="https://twitter.com/offyourrecord" target="_blank"
-              rel="noopener noreferrer">Dr Jonathan Whittall</a>
+            <a href="https://twitter.com/offyourrecord" target="_blank" rel="noopener noreferrer">Dr Jonathan
+              Whittall</a>
             <span class="print-link">Dr Jonathan Whittall &ndash;
               https://twitter.com/offyourrecord?lang=en</span>
             <br />Director, Analysis Department at M&#xE9;decins sans
@@ -579,7 +592,7 @@
               qualification course materials, including its textbook.
             </p>
             <p>
-              This involved sourcing academics &ndash; as well as editing and
+              This involved sourcing academics &ndash; and editing and
               checking their work for plagiarism and writing missing chapters.
             </p>
             <p>
@@ -605,7 +618,7 @@
               The work &ndash; which involved reading a variety of contracts
               (financial instruments, shipping, loan, merger & acquisition,
               stock issuance and prospectus, estate planning) contracts for
-              spelling, style, layout and grammar errors, as well as for
+              spelling, style, layout and grammar errors, and for
               correct convention for the contract type &ndash; is normally the
               responsibility of paralegals at smaller firms.
             </p>
