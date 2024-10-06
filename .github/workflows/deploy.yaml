@@ -15,7 +15,9 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           log-level: verbose
-          server: ftp://ftp.sauln.co.za/public_html/
+          protocol: ftp
+          server: sauln.co.za
+          server-dir: public_html/
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
