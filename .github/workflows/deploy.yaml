@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 20
       - name: deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           log-level: verbose
           ftp-server: ftp://ftp.sauln.co.za/public_html/
